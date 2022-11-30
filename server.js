@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const logger = require("./middleware/logger");
-// const api = require('./routes/index.js');
 const { v4: uuidv4 } = require("uuid");
 const fs = require("fs");
 
@@ -15,7 +14,6 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use(logger);
 app.use(express.urlencoded({ extended: true }));
-// app.use('/api', api);
 
 // GET route for home page
 app.get("/", (req, res) => {
@@ -50,7 +48,7 @@ app.post("/api/notes", (req, res) => {
   res.end();
 });
 
-// GET Route for a specific note
+// API GET route for a specific note
 app.get("/api/notes/:note_id", (req, res) => {
   const noteId = req.params.note_id;
   const existingNotesString = fs.readFileSync(dataFile, "utf8");
@@ -63,7 +61,7 @@ app.get("/api/notes/:note_id", (req, res) => {
   }
 });
 
-// DELETE Route for a specific note
+// API DELETE route for a specific note
 app.delete("/api/notes/:note_id", (req, res) => {
   const noteId = req.params.note_id;
   const existingNotesString = fs.readFileSync(dataFile, "utf8");
@@ -72,8 +70,12 @@ app.delete("/api/notes/:note_id", (req, res) => {
   let result = existingNotes.filter((note) => note.note_id !== noteId);
   result = JSON.stringify(result);
 
-  fs.writeFileSync(dataFile, result);
+  fs.writeFileSync(dataFile, JSON.stringify(result, null, 4));
   res.json(`Note has been deleted`);
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
 app.listen(PORT, () =>
