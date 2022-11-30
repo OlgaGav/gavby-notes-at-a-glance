@@ -1,14 +1,27 @@
 [
     {
-        "title":"Test Note 1",
-        "text":"Test note 1 text"
+        "title": "Test Note 1",
+        "text": "Test note 1 text",
+        "note_id": "zzz1237b-f27c-4588-958b-742c42495ac1"
     },
     {
-        "title":"Test Note 2",
-        "text":"Test note 2 text"
+        "title": "Test Note 2",
+        "text": "Test note 2 text",
+        "note_id": "sdf1117b-f27c-4588-958b-742c42495ac1"
     },
     {
-        "title":"Test Note 3",
-        "text":"Test note 3 text"
+        "title": "Test Note 3",
+        "text": "Test note 3 text",
+        "note_id": "ab34d07b-f27c-4588-958b-742c42495ac1"
+    },
+    {
+        "title": "Note Nov 29, 16:36",
+        "text": "test note details",
+        "note_id": "d2bfd07b-f27c-4588-958b-742c42495ac1"
+    },
+    {
+        "title": "Note Nov 29, 16:45",
+        "text": "Finally GET request works",
+        "note_id": "3349639d-dc40-4c91-b8ee-6e85e078b9e2"
     }
 ]
