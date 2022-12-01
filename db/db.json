@@ -1,1 +1,17 @@
-[{"title":"Test Note 1","text":"Test note 1 text","note_id":"zzz1237b-f27c-4588-958b-742c42495ac1"},{"title":"Test Note 2","text":"Test note 2 text","note_id":"sdf1117b-f27c-4588-958b-742c42495ac1"}]
+[
+    {
+        "title": "Improvements",
+        "text": "implement edit notes",
+        "id": "35496ee6-b055-43f2-94f2-ecea15c197da"
+    },
+    {
+        "title": "Heroku",
+        "text": "Deploy to Heroku",
+        "id": "58b21d62-10b3-448c-ae78-9a580d18166f"
+    },
+    {
+        "title": "Note to delete",
+        "text": "test note",
+        "id": "c6ef90d3-2119-4979-bca1-3e63452ad825"
+    }
+]
