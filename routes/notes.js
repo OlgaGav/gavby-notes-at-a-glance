@@ -15,7 +15,6 @@ notes.get("/", (req, res) => {
 // POST to create new note
 notes.post("/", (req, res) => {
   const { text, title } = req.body;
-
   const existingNotesString = fs.readFileSync(dataFile, "utf8");
   const existingNotes = JSON.parse(existingNotesString);
 

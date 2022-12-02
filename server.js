@@ -3,11 +3,7 @@ const cors = require("cors");
 const path = require("path");
 const logger = require("./middleware/logger");
 const api = require('./routes/api');
-// const { v4: uuidv4 } = require("uuid");
-// const fs = require("fs");
-
 const PORT = process.env.PORT || 3001;
-// const dataFile = path.resolve(__dirname, "db", "db.json");
 
 const app = express();
 app.use(cors());
@@ -28,9 +24,9 @@ app.get("/notes", (req, res) => {
 });
 
 // GET route to index.html in case of all other requests
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "/public/index.html"));
-// });
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "/public/index.html"));
+});
 
 app.listen(PORT, () =>
   console.log(`Application started and listen on port ${PORT}`)
