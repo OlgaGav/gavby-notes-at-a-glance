@@ -21,13 +21,13 @@
     
   ## Installation
   
-  Application deployed on Heroku. 
+  To run application locally: 
   
-  To run it locally from the root: ``node server.js``
+  1. Download the code. 
+  
+  2. Run from the root: ``node server.js``
   
   ## Usage
-  
-  Navigate to the application by link: https://gavby-notes-at-a-glance.herokuapp.com/
   
   ![index page of 'Notes at-a-glance' application](./public/assets/img/index.png)
 
